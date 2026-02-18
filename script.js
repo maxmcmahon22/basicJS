@@ -63,9 +63,9 @@ function printCarObject() {
 function loadCar(whichCar) {
   let src = null;
 
-  if (whichCar === 1) src = window.carObject1;
-  if (whichCar === 2) src = window.carObject2;
-  if (whichCar === 3) src = window.carObject3;
+  if (whichCar === 1 && typeof carObject1 !== "undefined") src = carObject1;
+  if (whichCar === 2 && typeof carObject2 !== "undefined") src = carObject2;
+  if (whichCar === 3 && typeof carObject3 !== "undefined") src = carObject3;
 
   if (!src) return;
 
@@ -73,6 +73,7 @@ function loadCar(whichCar) {
   document.getElementById("carMPG").value = src.cMPG;
   document.getElementById("carColor").value = src.cColor;
 }
+
 
 function changeColor(whichColor) {
   const p = document.getElementById("styleParagraph");
