@@ -60,7 +60,7 @@ function printCarObject() {
   console.log(carObj);
 }
 
-function loadCar(whichCar) {
+window.loadCar = function (whichCar) {
   console.log("loadCar clicked:", whichCar);
 
   const src = window["carObject" + whichCar];
@@ -71,7 +71,7 @@ function loadCar(whichCar) {
   document.getElementById("carType").value = src.cType;
   document.getElementById("carMPG").value = src.cMPG;
   document.getElementById("carColor").value = src.cColor;
-}
+};
 
 
 
