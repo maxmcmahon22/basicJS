@@ -61,13 +61,18 @@ function printCarObject() {
 }
 
 function loadCar(whichCar) {
+  console.log("loadCar clicked:", whichCar);
+
   const src = window["carObject" + whichCar];
+  console.log("src object:", src);
+
   if (!src) return;
 
   document.getElementById("carType").value = src.cType;
   document.getElementById("carMPG").value = src.cMPG;
   document.getElementById("carColor").value = src.cColor;
 }
+
 
 
 
